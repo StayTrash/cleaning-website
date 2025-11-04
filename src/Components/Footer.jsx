@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import Logo from "./Icons/Logo";
 import BubbulIcon from "./Icons/BubbulIcon";
 import InstagramIcon from "./Icons/InstagramIcon";
@@ -49,17 +48,25 @@ const Footer = () => {
               {/* Social Media Icons */}
               <div className="flex gap-3">
                 <a
-                  href="https://www.instagram.com/trueclean.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="True Clean on Instagram"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                  aria-label="Follow us on Instagram"
                   className="cursor-pointer hover:scale-110 transition-transform duration-200"
                 >
                   <InstagramIcon />
                 </a>
-                <div className="cursor-pointer hover:scale-110 transition-transform duration-200">
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                  aria-label="Follow us on Facebook"
+                  className="cursor-pointer hover:scale-110 transition-transform duration-200"
+                >
                   <FaceBookIcon />
-                </div>
+                </a>
               </div>
             </div>
 
@@ -112,20 +119,26 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold text-white">Legal</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link
-                      href="/privacy-policy"
-                      className="text-sm text-white/80 hover:text-white transition-colors duration-200"
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                      }}
+                      className="text-sm text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
                     >
                       Privacy Policy
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
-                      href="/terms-and-conditions"
-                      className="text-sm text-white/80 hover:text-white transition-colors duration-200"
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                      }}
+                      className="text-sm text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
                     >
                       Terms & Conditions
-                    </Link>
+                    </a>
                   </li>
                   <li>
                     <a
@@ -145,18 +158,19 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <PhoneIcon />
-                  <span className="text-sm text-white/80">+91 93169 99874</span>
+                  <span className="text-sm text-white/80">+1 (555) 123-4567</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <EmailIcon />
                   <span className="text-sm text-white/80">
-                    info@trueclean.in
+                    contact@company.com
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <LocationIcon />
                   <span className="text-sm text-white/80">
-                    Alovi & Co, Vadodara
+                    123 Business Street, Suite 100<br />
+                    City, State 12345
                   </span>
                 </li>
               </ul>
