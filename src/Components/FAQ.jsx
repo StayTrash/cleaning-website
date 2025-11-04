@@ -70,7 +70,7 @@ const FAQ = () => {
                   <HelloIcon />
                 </div>
                 <span className="text-[#00603A] font-semibold font-serif text-lg">
-                  FAQ's
+                  FAQs
                 </span>
               </div>
 
