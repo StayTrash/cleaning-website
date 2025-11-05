@@ -76,9 +76,9 @@ const TrustSection = () => {
               {/* Reviewer Info */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">P</span>
+                  <span className="text-white font-bold text-sm">J</span>
                 </div>
-                <span className="font-semibold">Priya R</span>
+                <span className="font-semibold">John Doe</span>
               </div>
             </div>
           </SlideUp>

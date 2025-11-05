@@ -157,7 +157,7 @@ const ServicesSection2 = () => {
               </span>
             </div>
             <h3 className="text-4xl lg:text-5xl font-semibold leading-tight">
-              Behind Every Shine, There's a System
+              Behind Every Shine, There&apos;s a System
             </h3>
           </div>
 

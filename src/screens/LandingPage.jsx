@@ -12,6 +12,7 @@ import HowItworks from "@/Components/HowItworks";
 import Testimonials from "@/Components/Testimonials";
 import Footer from "@/Components/Footer";
 import BookingCalculator from "@/Components/BookingCalculator";
+import ScrollToTop from "@/Components/ScrollToTop";
 
 const Home = () => {
   return (
@@ -41,6 +42,7 @@ const Home = () => {
       </div>
       <Footer />
       <BookingCalculator />
+      <ScrollToTop />
     </div>
   );
 };
