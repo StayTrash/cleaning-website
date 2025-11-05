@@ -3,7 +3,7 @@ import LandingPage from "@/screens/LandingPage";
 
 const Page = () => {
   return (
-    <div className="bg-background">
+    <div className="bg-background overflow-x-hidden">
       <LandingPage />
     </div>
   );

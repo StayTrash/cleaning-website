@@ -31,12 +31,14 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins), system-ui, sans-serif;
   /* padding-top: 140px; Account for fixed navbar height with padding */
+  overflow-x: hidden;
 }
 
 /* Enhanced smooth scrolling */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 140px; /* Account for fixed navbar */
+  overflow-x: hidden;
 }
 
 /* Custom smooth scrolling animation for better visual feedback */

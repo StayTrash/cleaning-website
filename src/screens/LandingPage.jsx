@@ -15,7 +15,7 @@ import BookingCalculator from "@/Components/BookingCalculator";
 
 const Home = () => {
   return (
-    <div className="relative bg-[#FAFFFA]">
+    <div className="relative bg-[#FAFFFA] overflow-x-hidden">
       {/* <div>
         <Navbar />
       </div> */}
