@@ -47,7 +47,7 @@ const FAQ = () => {
       id: 7,
       question: "How can I contact Support?",
       answer:
-        "You can reach TrueClean's Support Team easily through any of the following methods: • Phone: +1 (555) 123-4567 • Email: info@trueclean.com • Website Chat: Use the live chat feature on our website for quick answers during business hours • Contact Form: Fill out the form on our Contact Us page and we'll respond as soon as possible. Our support team is available Monday–Saturday, 9 AM – 6 PM and we're always happy to help with questions, changes to your booking, or any concerns.",
+        "You can reach TrueClean's Support Team easily through any of the following methods: • Phone: +1 (555) 123-4567 • Email: contact@company.com • Website Chat: Use the live chat feature on our website for quick answers during business hours • Contact Form: Fill out the form on our Contact Us page and we'll respond as soon as possible. Our support team is available Monday–Saturday, 9 AM – 6 PM and we're always happy to help with questions, changes to your booking, or any concerns.",
     },
     
     
