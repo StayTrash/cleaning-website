@@ -9,7 +9,7 @@
 
 **A modern, responsive landing page built with Next.js for showcasing professional cleaning services**
 
-[Live Demo](https://cleaning-website-phi.vercel.app/) • [Documentation](#features)
+[Live Demo](https://cleaning-website-phi.vercel.app/)
 
 </div>
 
