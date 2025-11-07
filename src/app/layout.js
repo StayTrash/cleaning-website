@@ -1,4 +1,9 @@
-import { Poppins, Work_Sans, Source_Serif_4 } from "next/font/google";
+import {
+  Poppins,
+  Work_Sans,
+  Source_Serif_4,
+  Libre_Baskerville,
+} from "next/font/google";
 import "./globals.css";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import LoadingScreen from "@/Components/LoadingScreen";
@@ -21,6 +26,12 @@ const sourceSerif4 = Source_Serif_4({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const libreBaskerville = Libre_Baskerville({
+  variable: "--font-libre-baskerville",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 export const metadata = {
   title: "True Clean",
   description: "A clean and modern website",
@@ -30,7 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${workSans.variable} ${sourceSerif4.variable} antialiased`}
+        className={`${poppins.variable} ${workSans.variable} ${sourceSerif4.variable} ${libreBaskerville.variable} antialiased`}
       >
         <LoadingProvider>
           {/* <LoadingScreen /> */}

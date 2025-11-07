@@ -16,7 +16,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
   --font-work-sans: var(--font-work-sans);
-  --font-serif: var(--font-source-serif-4);
+  --font-serif: var(--font-libre-baskerville);
 }
 
 @media (prefers-color-scheme: dark) {

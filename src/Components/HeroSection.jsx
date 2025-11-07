@@ -31,13 +31,13 @@ const HeroSection = () => {
             </SlideUp>
 
             <SlideUp delay={0.1}>
-              <h1 className="hidden md:!block mt-4 text-4xl md:text-7xl leading-[1.2] font-bold tracking-[-0.02em] text-[#FAFFFA]">
+              <h1 className="hidden md:!block mt-4 text-4xl md:text-7xl leading-[1.2] font-serif font-bold tracking-[-0.02em] text-[#FAFFFA]">
                 {/* Eco-Friendly Home
                 <br />
                 Cleaning */}
                 Sustainable Sparkle <br /> for Your Home
               </h1>
-              <h1 className="md:hidden block mt-4 text-4xl md:text-7xl leading-[1.2] font-bold tracking-[-0.02em] text-[#FAFFFA]">
+              <h1 className="md:hidden block mt-4 text-4xl md:text-7xl leading-[1.2] font-serif font-bold tracking-[-0.02em] text-[#FAFFFA]">
                 {/* Eco-Friendly <br /> Home Cleaning */}
                 Sustainable Sparkle <br /> for Your Home
               </h1>
