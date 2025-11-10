@@ -28,6 +28,8 @@ True Clean is a **frontend-only** landing page project designed to showcase a be
 ### 🎨 Design & UI
 - **Modern & Responsive** - Fully responsive design that works seamlessly on all devices
 - **Smooth Animations** - Beautiful animations and transitions using Framer Motion
+- **Accessible Dark Mode** - One-click light/dark toggle with persisted user preference
+- **Themeable Palette** - Centralized CSS variables (see `globals.css`) for quick brand customization
 - **Tailwind CSS** - Utility-first CSS framework for rapid UI development
 - **Custom Components** - Reusable, well-structured React components
 
@@ -40,6 +42,7 @@ True Clean is a **frontend-only** landing page project designed to showcase a be
 - ❓ **FAQ Section** - Expandable accordion with common questions
 - 📞 **Contact Form** - Interactive contact form (demo mode)
 - 📊 **Booking Calculator** - Service booking calculator (demo mode)
+- ✅ **Success Popup** - Themed confirmation modal with accessible transitions
 
 ### 🚀 Technical Features
 - **Server-Side Rendering (SSR)** - Fast initial page loads with Next.js
@@ -56,7 +59,7 @@ True Clean is a **frontend-only** landing page project designed to showcase a be
 |----------|-----------|
 | **Framework** | Next.js 16 |
 | **Library** | React 19.2.0 |
-| **Styling** | Tailwind CSS 4 |
+| **Styling** | Tailwind CSS 4 + CSS Variables |
 | **Animations** | Framer Motion |
 | **Fonts** | Google Fonts (Poppins, Work Sans, Source Serif 4) |
 | **Package Manager** | npm / yarn / pnpm |
