@@ -76,6 +76,23 @@
   --testimonial-avatar-bg: #0b4b2a;
   --testimonial-avatar-text: #fafffa;
   --testimonial-overlay: rgba(250, 255, 250, 0.85);
+  --success-overlay-gradient: linear-gradient(
+    135deg,
+    rgba(1, 80, 46, 0.25) 0%,
+    rgba(1, 80, 46, 0.18) 50%,
+    rgba(1, 80, 46, 0.12) 100%
+  );
+  --success-popup-bg: #fafffa;
+  --success-popup-border: rgba(181, 221, 194, 0.6);
+  --success-popup-title: #01502e;
+  --success-popup-subtext: rgba(0, 80, 46, 0.7);
+  --success-popup-icon-bg: #01502e;
+  --success-popup-icon-fg: #fafffa;
+  --success-popup-button-bg: #ffffff;
+  --success-popup-button-border: rgba(181, 221, 194, 1);
+  --success-popup-button-text: #01502e;
+  --success-popup-button-hover: rgba(250, 255, 250, 0.9);
+  --success-popup-close: rgba(1, 80, 46, 0.8);
 }
 
 @theme inline {
@@ -165,6 +182,22 @@ html.dark {
   --testimonial-avatar-bg: rgba(52, 211, 153, 0.35);
   --testimonial-avatar-text: #04130c;
   --testimonial-overlay: rgba(12, 52, 36, 0.78);
+  --success-overlay-gradient: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.2) 0%,
+    rgba(12, 64, 44, 0.35) 100%
+  );
+  --success-popup-bg: rgba(10, 40, 28, 0.94);
+  --success-popup-border: rgba(52, 211, 153, 0.35);
+  --success-popup-title: #ecfdf5;
+  --success-popup-subtext: rgba(209, 250, 229, 0.78);
+  --success-popup-icon-bg: rgba(52, 211, 153, 0.85);
+  --success-popup-icon-fg: #04130c;
+  --success-popup-button-bg: rgba(12, 52, 36, 0.95);
+  --success-popup-button-border: rgba(52, 211, 153, 0.45);
+  --success-popup-button-text: #ecfdf5;
+  --success-popup-button-hover: rgba(17, 67, 47, 0.95);
+  --success-popup-close: rgba(52, 211, 153, 0.85);
 }
 
 body {
@@ -332,4 +365,11 @@ html.dark textarea::placeholder {
 
 .testimonial-avatar-text {
   color: var(--testimonial-avatar-text);
+}
+
+.success-popup-overlay {
+  background: var(--success-overlay-gradient);
+  backdrop-filter: blur(6px) saturate(115%);
+  -webkit-backdrop-filter: blur(6px) saturate(115%);
+  transition: background 0.3s ease;
 }
