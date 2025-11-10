@@ -97,7 +97,7 @@ const ServicesSection2 = () => {
             <div className="p-2">
               <HelloIcon />
             </div>
-            <span className="text-[#00603A] font-semibold font-serif text-lg">
+            <span className="text-[var(--accent-strong)] font-serif font-semibold text-lg">
               Our Services
             </span>
           </div>

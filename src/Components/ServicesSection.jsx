@@ -132,7 +132,7 @@ const ServicesSection = () => {
               <span className="inline-block">
                 <HelloIcon />
               </span>
-              <span>Our Services</span>
+              <span className="text-[var(--accent-strong)] font-serif font-semibold text-lg">Our Services</span>
             </div>
           </SlideUp>
 
