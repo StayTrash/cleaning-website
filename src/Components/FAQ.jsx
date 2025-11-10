@@ -45,12 +45,28 @@ const FAQ = () => {
     },
     {
       id: 7,
+      question: "How much notice do you need for a booking?",
+      answer:
+        "We recommend booking at least **48 hours in advance** to guarantee your preferred time slot. Same-day or next-day appointments may be available depending on team availability—just reach out and we’ll do our best to help.",
+    },
+    {
+      id: 8,
+      question: "Do I need to be home during the cleaning?",
+      answer:
+        "Not necessarily. As long as our team can access your space (via key, smart lock, concierge, or a trusted point of contact), you can return to a freshly cleaned home. If you prefer to be present, that’s perfectly fine too!",
+    },
+    {
+      id: 9,
+      question: "What cleaning products do you use?",
+      answer:
+        "TrueClean uses **eco-friendly, non-toxic cleaning products** that are safe for children, pets, and allergy-sensitive clients. If you have specific product preferences or sensitivities, let us know—we're happy to tailor the supplies we use.",
+    },
+    {
+      id: 10,
       question: "How can I contact Support?",
       answer:
         "You can reach TrueClean's Support Team easily through any of the following methods: • Phone: +1 (555) 123-4567 • Email: contact@company.com • Website Chat: Use the live chat feature on our website for quick answers during business hours • Contact Form: Fill out the form on our Contact Us page and we'll respond as soon as possible. Our support team is available Monday–Saturday, 9 AM – 6 PM and we're always happy to help with questions, changes to your booking, or any concerns.",
     },
-    
-    
   ];
 
   const toggleFAQ = (faqId) => {
