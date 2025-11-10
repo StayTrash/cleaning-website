@@ -175,9 +175,9 @@ const FAQ = () => {
                         openFAQ === faq.id
                           ? "max-h-96 opacity-100"
                           : "max-h-0 opacity-0"
-                      }`}
+                      } bg-[var(--faq-card-bg)]`}
                     >
-                      <div className="px-6 pb-4 bg-[var(--faq-answer-bg)] transition-colors duration-300">
+                      <div className="px-6 pb-4 transition-colors duration-300">
                         <p className="text-[var(--faq-answer)] text-sm leading-relaxed whitespace-pre-line transition-colors duration-300">
                           {faq.answer}
                         </p>
