@@ -7,6 +7,23 @@ import {
 import "./globals.css";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import LoadingScreen from "@/Components/LoadingScreen";
+import { ThemeProvider } from "@/contexts/ThemeContext";
+
+const initialThemeScript = `
+(function () {
+  try {
+    var storageKey = "true-clean-theme";
+    var storedTheme = localStorage.getItem(storageKey);
+    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var theme = storedTheme || (prefersDark ? "dark" : "light");
+    var root = document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme === "dark" ? "dark" : "light");
+    root.setAttribute("data-theme", theme === "dark" ? "dark" : "light");
+  } catch (error) {
+    console.warn("Theme initialization failed", error);
+  }
+})();`;
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -39,14 +56,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: initialThemeScript }} />
+      </head>
       <body
         className={`${poppins.variable} ${workSans.variable} ${sourceSerif4.variable} ${libreBaskerville.variable} antialiased`}
       >
-        <LoadingProvider>
-          {/* <LoadingScreen /> */}
-          {children}
-        </LoadingProvider>
+        <ThemeProvider>
+          <LoadingProvider>
+            {/* <LoadingScreen /> */}
+            {children}
+          </LoadingProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

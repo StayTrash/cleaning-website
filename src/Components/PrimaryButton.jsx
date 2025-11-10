@@ -20,22 +20,22 @@ const PrimaryButton = ({
   // Color configurations
   const variants = {
     primary: {
-      bg: "#FFFFFF",
-      bgHover: "#00603A",
-      text: "#00603A",
-      textHover: "#FFFFFF",
-      border: "#B5DDC2",
-      glow: "rgba(0, 96, 58, 0.75)",
-      sparkColor: "#00603A",
+      bg: "var(--button-primary-bg)",
+      bgHover: "var(--button-primary-hover-bg)",
+      text: "var(--button-primary-text)",
+      textHover: "var(--button-primary-text-hover)",
+      border: "var(--button-primary-border)",
+      glow: "var(--button-primary-glow)",
+      sparkColor: "var(--button-primary-spark)",
     },
     secondary: {
-      bg: "#0B4B2A",
-      bgHover: "#0A4526",
-      text: "#FAFFFA",
-      textHover: "#FFFFFF",
-      border: "#B5DDC2",
-      glow: "rgba(11, 75, 42, 0.75)",
-      sparkColor: "#FFFFFF",
+      bg: "var(--button-secondary-bg)",
+      bgHover: "var(--button-secondary-hover-bg)",
+      text: "var(--button-secondary-text)",
+      textHover: "var(--button-secondary-text-hover)",
+      border: "var(--button-secondary-border)",
+      glow: "var(--button-secondary-glow)",
+      sparkColor: "var(--button-secondary-spark)",
     },
   };
 

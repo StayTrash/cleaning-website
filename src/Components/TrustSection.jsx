@@ -7,7 +7,7 @@ import HelloIcon from "./Icons/HelloIcon";
 
 const TrustSection = () => {
   return (
-    <section className="md:py-20 bg-[#FAFFFA]">
+    <section className="md:py-20 bg-[var(--surface)] transition-colors duration-300">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-6 md:mb-16">
@@ -16,14 +16,14 @@ const TrustSection = () => {
               <div className="">
                 <HelloIcon />
               </div>
-              <span className="text-[#00603A] font-serif font-semibold text-lg">
+              <span className="text-[var(--accent-strong)] font-serif font-semibold text-lg">
                 Built on Trust
               </span>
             </div>
           </SlideUp>
 
           <SlideUp delay={0.1}>
-            <h2 className="md:text-center text-left text-3xl md:text-6xl  font-semibold text-[#1a1a1a] leading-[1.5]">
+            <h2 className="md:text-center text-left text-3xl md:text-6xl font-semibold text-[var(--foreground)] leading-[1.5] transition-colors duration-300">
               {/* Confidence in Every Clean */}
               Where Trust Meets Cleaniness
             </h2>
@@ -34,7 +34,7 @@ const TrustSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:w-10/12  mx-auto">
           {/* Card 1 - Testimonial (Dark Green) */}
           <SlideUp delay={0.15}>
-            <div className="bg-[#00603A] text-white p-4 md:p-8 relative overflow-hidden rounded-2xl">
+            <div className="bg-[var(--accent-strong)] text-white p-4 md:p-8 relative overflow-hidden rounded-2xl transition-colors duration-300 shadow-lg shadow-black/10">
               {/* Star Rating */}
               <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
@@ -85,7 +85,7 @@ const TrustSection = () => {
           <SlideUp delay={0.15}>
             {/* Card 2 - Homes Cleaned (Light Green) */}
             <div
-              className="bg-[#A8D5BA] p-8 relative h-[16rem] md:h-full rounded-2xl overflow-hidden"
+              className="bg-[var(--trust-card-bg)] text-[var(--trust-card-text)] p-8 relative h-[16rem] md:h-full rounded-2xl overflow-hidden border border-[var(--trust-card-border)] transition-colors duration-300 shadow-lg shadow-black/5"
               style={{
                 clipPath:
                   "polygon(0% 0%, 100% 0%, 100% 100%, 100px 100%, 0% calc(100% - 100px))",
@@ -94,16 +94,18 @@ const TrustSection = () => {
               <div className="text-start">
                 {/* Number */}
                 <div className="mb-4">
-                  <h3 className="text-5xl font-bold text-[#00603A] mb-2">
+                  <h3 className="text-5xl font-bold text-[var(--trust-card-emphasis)] mb-2 transition-colors duration-300">
                     100+
                   </h3>
-                  <p className="text-[#00603A] font-semibold">Home Cleaned</p>
+                  <p className="text-[var(--trust-card-text-muted)] font-semibold transition-colors duration-300">
+                    Home Cleaned
+                  </p>
                 </div>
 
                 {/* Icon */}
                 <div className="flex justify-end mt-8">
-                  <div className="w-20 h-20  rounded-full flex items-center justify-center">
-                    <HandBrushIcon className="w-10 h-10 text-white" />
+                  <div className="w-20 h-20 rounded-full flex items-center justify-center bg-[var(--trust-card-icon-bg)] transition-colors duration-300 trust-card-icon text-[var(--trust-card-emphasis)]">
+                    <HandBrushIcon className="w-10 h-10" />
                   </div>
                 </div>
               </div>
@@ -112,7 +114,7 @@ const TrustSection = () => {
           <SlideUp delay={0.15}>
             {/* Card 3 - Satisfaction Guarantee (Light Green) */}
             <div
-              className="bg-[#A8D5BA] px-8 py-4 rounded-2xl h-[16rem] md:h-full relative overflow-hidden"
+              className="bg-[var(--trust-card-bg)] text-[var(--trust-card-text)] px-8 py-4 rounded-2xl h-[16rem] md:h-full relative overflow-hidden border border-[var(--trust-card-border)] transition-colors duration-300 shadow-lg shadow-black/5"
               style={{
                 clipPath:
                   "polygon(0% 0%, calc(100% - 100px) 0%, 100% 100px, 100% 100%, 0% 100%)",
@@ -121,18 +123,18 @@ const TrustSection = () => {
               <div className="h-full flex flex-col justify-end text-end">
                 {/* Icon */}
                 <div className="flex justify-left mb-6">
-                  <div className="w-20 h-20  rounded-full flex items-center justify-center">
-                    <HandIcon className="w-10 h-10 text-white" />
+                  <div className="w-20 h-20 rounded-full flex items-center justify-center bg-[var(--trust-card-icon-bg)] transition-colors duration-300 trust-card-icon text-[var(--trust-card-emphasis)]">
+                    <HandIcon className="w-10 h-10" />
                   </div>
                 </div>
 
                 {/* Number and Text */}
                 <div className="flex justify-end items-end mt-12">
                   <div>
-                    <h3 className="text-5xl font-bold text-[#00603A] mb-0">
+                    <h3 className="text-5xl font-bold text-[var(--trust-card-emphasis)] mb-0 transition-colors duration-300">
                       100%
                     </h3>
-                    <p className="text-[#00603A] font-semibold">
+                    <p className="text-[var(--trust-card-text-muted)] font-semibold transition-colors duration-300">
                       Satisfaction Guarantee
                     </p>
                   </div>

@@ -142,7 +142,7 @@ const HeroSection = () => {
 
                 {/* Rating badge with SVG */}
                 <div className="absolute bottom-8 -right-5 md:bottom-10 md:-right-12">
-                  <div className="rounded-xl bg-[#FAFFFA]  text-[#0B4B2A] shadow-md px-2 md:px-4 py-1 md:py-3 flex items-center gap-3">
+                  <div className="rounded-xl bg-[var(--card-surface)] text-[var(--foreground)] border border-[var(--border-muted)] shadow-md px-2 md:px-4 py-1 md:py-3 flex items-center gap-3 transition-colors duration-300">
                     <div className="w-12 h-12 md:w-16 md:h-16 p-1 md:p-2 rounded-lg flex bg-primary items-center justify-center">
                       <Image
                         src="/Images/bestrated.svg"
@@ -152,8 +152,8 @@ const HeroSection = () => {
                         className="w-full h-full"
                       />
                     </div>
-                    <div className="text-xs md:text-base text-black leading-5 italic">
-                      <div className="font-bold   font-serif">
+                    <div className="text-xs md:text-base leading-5 italic">
+                      <div className="font-bold font-serif">
                         #1 Best Rated
                       </div>
                       <div className="font-bold text-xs md:text-base font-serif">

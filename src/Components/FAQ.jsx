@@ -58,7 +58,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className=" bg-[#FAFFFA] py-6 md:py-20">
+    <section className="bg-[var(--surface)] py-6 md:py-20 transition-colors duration-300">
       <div className="container mx-auto w-10/12 ">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-20 items-start">
           {/* Left Side - Header */}
@@ -95,7 +95,7 @@ const FAQ = () => {
           <SlideUp delay={0.25}>
             <div className="relative">
               {/* Top gradient overlay */}
-              <div className="absolute top-0 left-0 right-0 h-8 md:h-20 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute top-0 left-0 right-0 h-8 md:h-20 bg-gradient-to-b from-[var(--faq-overlay-top)] to-transparent z-10 pointer-events-none transition-colors duration-300"></div>
               
               {/* Scrollable content */}
               <div 
@@ -106,24 +106,34 @@ const FAQ = () => {
                 {faqData.map((faq) => (
                   <div
                     key={faq.id}
-                    className={`border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 ${
+                    className={`border border-[var(--faq-border)] rounded-lg overflow-hidden transition-all duration-300 bg-[var(--faq-card-bg)] shadow-sm shadow-[var(--faq-shadow)] ${
                       openFAQ === faq.id
-                        ? "border-primary"
-                        : "hover:border-gray-300"
+                        ? "border-[var(--accent-strong)] shadow-[var(--faq-shadow-active)]"
+                        : "hover:border-[var(--faq-border-hover)]"
                     }`}
                   >
                     {/* Question */}
                     <button
                       onClick={() => toggleFAQ(faq.id)}
-                      className="w-full px-6 py-3 text-left flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-200 touch-manipulation"
+                      className="w-full px-6 py-3 text-left flex items-center justify-between bg-transparent hover:bg-[var(--faq-card-hover)] transition-colors duration-200 touch-manipulation"
                     >
-                      <span className="text-[#1a1a1a] font-medium text-base pr-4">
+                      <span className="text-[var(--faq-question)] font-medium text-base pr-4 transition-colors duration-300">
                         {faq.question}
                       </span>
                       <div
-                        className={`flex-shrink-0 w-6 h-6 flex items-center bg-tertiary rounded-full justify-center transition-transform duration-300 ${
+                        className={`flex-shrink-0 w-6 h-6 flex items-center rounded-full justify-center transition-all duration-300 ${
                           openFAQ === faq.id ? "rotate-45" : ""
                         }`}
+                        style={{
+                          background:
+                            openFAQ === faq.id
+                              ? "var(--faq-icon-bg-active)"
+                              : "var(--faq-icon-bg)",
+                          color:
+                            openFAQ === faq.id
+                              ? "var(--faq-icon-color-active)"
+                              : "var(--faq-icon-color)",
+                        }}
                       >
                         <svg
                           width="16"
@@ -134,7 +144,7 @@ const FAQ = () => {
                         >
                           <path
                             d="M8 3.5V12.5M3.5 8H12.5"
-                            stroke="#01502E"
+                            stroke="currentColor"
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -151,8 +161,8 @@ const FAQ = () => {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <div className="px-6 pb-4 bg-gray-50">
-                        <p className="text-[#666666] text-sm leading-relaxed whitespace-pre-line">
+                      <div className="px-6 pb-4 bg-[var(--faq-answer-bg)] transition-colors duration-300">
+                        <p className="text-[var(--faq-answer)] text-sm leading-relaxed whitespace-pre-line transition-colors duration-300">
                           {faq.answer}
                         </p>
                       </div>
@@ -163,7 +173,7 @@ const FAQ = () => {
               </div>
               
               {/* Bottom gradient overlay */}
-              <div className="absolute bottom-0 left-0 right-0 h-8 md:h-20 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-8 md:h-20 bg-gradient-to-t from-[var(--faq-overlay-bottom)] to-transparent z-10 pointer-events-none transition-colors duration-300"></div>
             </div>
           </SlideUp>
         </div>
