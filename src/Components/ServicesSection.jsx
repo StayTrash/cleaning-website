@@ -137,7 +137,7 @@ const ServicesSection = () => {
           </SlideUp>
 
           <SlideUp delay={0.1}>
-            <h2 className="text-4xl md:text-6xl leading-[1.1] font-semibold tracking-[-0.02em] text-[#2D2D2D] mb-4">
+            <h2 className="text-4xl md:text-6xl leading-[1.1] font-semibold font-serif tracking-[-0.02em] text-[#2D2D2D] mb-4">
               {/* Reliable Cleaning, */}Services Tailored
             </h2>
           </SlideUp>

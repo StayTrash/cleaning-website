@@ -23,7 +23,7 @@ const TrustSection = () => {
           </SlideUp>
 
           <SlideUp delay={0.1}>
-            <h2 className="md:text-center text-left text-3xl md:text-6xl font-semibold text-[var(--foreground)] leading-[1.5] transition-colors duration-300">
+            <h2 className="md:text-center text-left text-3xl md:text-6xl font-semibold font-serif text-[var(--foreground)] leading-[1.5] transition-colors duration-300">
               {/* Confidence in Every Clean */}
               Where Trust Meets Cleaniness
             </h2>

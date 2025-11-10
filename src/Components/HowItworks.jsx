@@ -116,7 +116,7 @@ const HowItWorksSection = () => {
                       </span>
                     </div>
 
-                    <span className="z-50 text-3xl z-50 lg:text-5xl xl:text-6xl text-[#FAFFFA] leading-[1.1] tracking-[-0.02em] font-semibold">
+                    <span className="z-50 text-3xl z-50 lg:text-5xl xl:text-6xl text-[#FAFFFA] leading-[1.1] tracking-[-0.02em] font-semibold font-serif">
                       {/* Behind Every Shine, There's a System */}Precision
                       cleaning, Powered By Process
                     </span>

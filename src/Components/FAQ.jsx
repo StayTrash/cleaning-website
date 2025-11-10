@@ -92,7 +92,7 @@ const FAQ = () => {
 
               {/* Main Heading */}
               <div className="md:space-y-6">
-                <h2 className="text-3xl lg:text-5xl font-semibold text-[#1a1a1a] leading-tight">
+                <h2 className="text-3xl lg:text-5xl font-semibold font-serif text-[#1a1a1a] leading-tight">
                   {/* Got Questions?
                   <br />
                   We've Got Answers */}Help Hub:  <br /> Questions & Answers

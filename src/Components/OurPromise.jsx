@@ -70,7 +70,7 @@ const OurPromise = () => {
             {/* Main Heading */}
             <div className="space-y-4 ">
               <SlideUp delay={0.15}>
-                <h2 className="text-3xl sm:text-5xl text-left lg:text-5xl xl:text-6xl font-semibold text-[#1a1a1a] leading-[1.5] md:leading-tight">
+                <h2 className="text-3xl sm:text-5xl text-left lg:text-5xl xl:text-6xl font-semibold font-serif text-[#1a1a1a] leading-[1.5] md:leading-tight">
                   {/* A Cleaner Home A Healthier Life */}
                   From Clean Homes to Healthy Lives.
                 </h2>

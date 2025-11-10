@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
             <SlideUp delay={0.1}>
               {/* Main Heading */}
               <div className="space-y-4 sm:space-y-6">
-                <h2 className="text-3xl lg:text-6xl text-left font-semibold text-[#1a1a1a] leading-[1.5] md:leading-tight">
+                <h2 className="text-3xl lg:text-6xl text-left font-semibold font-serif text-[#1a1a1a] leading-[1.5] md:leading-tight">
                   {/* Why Families Rely on True Clean */}
                   True Clean: The Family Trusted Choice
                 </h2>

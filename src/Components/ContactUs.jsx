@@ -286,7 +286,7 @@ const ContactUs = () => {
 
               {/* Main Heading */}
               <div className="space-y-6">
-                <h2 className="text-3xl lg:text-5xl font-semibold text-[#1a1a1a] leading-tight">
+                <h2 className="text-3xl lg:text-5xl font-semibold font-serif text-[#1a1a1a] leading-tight">
                   {/* Let's Talk With Us */}Consult with Our Cleaning Expert
                 </h2>
               </div>

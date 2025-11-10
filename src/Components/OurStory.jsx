@@ -31,7 +31,7 @@ const OurStory = () => {
                   </div>
                 </div>
               </div>
-              <h2 className="md:hidden block text-3xl lg:text-5xl font-semibold text-[#1a1a1a] leading-tight">
+              <h2 className="md:hidden block text-3xl lg:text-5xl font-semibold font-serif text-[#1a1a1a] leading-tight">
                 {/* Born from the Mess.
                 <br />
                 Built on Trust. */}
@@ -71,7 +71,7 @@ const OurStory = () => {
                     Our Story
                   </div>
                 </div>
-                <h2 className="hidden md:!block text-3xl lg:text-5xl font-semibold text-[#1a1a1a] leading-tight">
+                <h2 className="hidden md:!block text-3xl lg:text-5xl font-semibold font-serif text-[#1a1a1a] leading-tight">
                   {/* Born from the Mess.
                   <br />
                   Built on Trust. */}

@@ -120,10 +120,10 @@ const Testimonials = () => {
             </span>
           </div>
 
-          <h2 className="md:hidden block text-3xl lg:text-6xl font-semibold text-[var(--foreground)] leading-tight mb-6 transition-colors duration-300">
+          <h2 className="md:hidden block text-3xl lg:text-6xl font-semibold font-serif text-[var(--foreground)] leading-tight mb-6 transition-colors duration-300">
             Voices That Reflect the Shine
           </h2>
-          <h2 className="hidden md:!block text-3xl lg:text-6xl font-semibold text-[var(--foreground)] leading-tight mb-6 transition-colors duration-300">
+          <h2 className="hidden md:!block text-3xl lg:text-6xl font-semibold font-serif text-[var(--foreground)] leading-tight mb-6 transition-colors duration-300">
             Voices That Reflect the
             <br />
             Shine
