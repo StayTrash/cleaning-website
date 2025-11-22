@@ -335,13 +335,13 @@ const BookingCalculator = () => {
     return (
       <div className="mb-3">
         <div
-          className="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-3 cursor-pointer hover:bg-gray-50/50 transition-colors"
+          className="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-3 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-[var(--surface-alt)]/50 transition-colors"
           onClick={() => handleServiceSelection(service)}
         >
-          <div className="flex items-center justify-center md:justify-start w-full md:w-1/2 py-3 gap-2 md:border-b border-gray-500">
+          <div className="flex items-center justify-center md:justify-start w-full md:w-1/2 py-3 gap-2 md:border-b border-gray-500 dark:border-[var(--border-muted)]">
             <div
               className={`w-5 h-5 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${
-                serviceData.selected ? "bg-secondary/30" : "bg-gray-200"
+                serviceData.selected ? "bg-secondary/30 dark:bg-[var(--tertiary)]/30" : "bg-gray-200 dark:bg-[var(--surface-alt)]"
               }`}
             >
               {serviceData.selected ? (
@@ -352,7 +352,7 @@ const BookingCalculator = () => {
             </div>
             <span
               className={`text-sm text-center md:text-left font-medium transition-colors ${
-                serviceData.selected ? "text-primary" : "text-gray-700"
+                serviceData.selected ? "text-primary dark:text-[var(--tertiary)]" : "text-gray-700 dark:text-[var(--muted-foreground)]"
               }`}
             >
               {label}
@@ -361,15 +361,15 @@ const BookingCalculator = () => {
 
           <div className="flex items-center justify-center md:justify-between w-full md:w-1/2 py-2 ">
             <div
-              className="flex items-center space-x-2 md:space-x-3 border-b border-gray-500  gap-4 bg-gray-50 rounded-full px-2 md:px-3 py-1 w-auto"
+              className="flex items-center space-x-2 md:space-x-3 border-b border-gray-500 dark:border-[var(--border-muted)] gap-4 bg-gray-50 dark:bg-[var(--surface-alt)] rounded-full px-2 md:px-3 py-1 w-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => updateQuantity(service, -1)}
                 className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
                   serviceData.selected && serviceData.quantity > 1
-                    ? "bg-secondary/30 hover:bg-secondary/40"
-                    : "bg-gray-200 hover:bg-gray-300"
+                    ? "bg-secondary/30 dark:bg-[var(--tertiary)]/30 hover:bg-secondary/40 dark:hover:bg-[var(--tertiary)]/40"
+                    : "bg-gray-200 dark:bg-[var(--surface)] hover:bg-gray-300 dark:hover:bg-[var(--border-muted)]"
                 }`}
                 disabled={!serviceData.selected || serviceData.quantity <= 1}
               >
@@ -378,7 +378,7 @@ const BookingCalculator = () => {
                   color={serviceData.selected && serviceData.quantity > 1 ? "#2D5A3D" : "#6B7280"} 
                 />
               </button>
-              <span className="text-gray-700 text-xs md:text-sm min-w-[60px] md:min-w-[80px] text-center font-medium flex-1">
+              <span className="text-gray-700 dark:text-[var(--muted-foreground)] text-xs md:text-sm min-w-[60px] md:min-w-[80px] text-center font-medium flex-1">
                 {serviceData.selected ? serviceData.quantity : 0}{" "}
                 {serviceData.unit}
               </span>
@@ -386,8 +386,8 @@ const BookingCalculator = () => {
                 onClick={() => updateQuantity(service, 1)}
                 className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
                   serviceData.selected
-                    ? "bg-secondary/30 hover:bg-secondary/40"
-                    : "bg-gray-200 hover:bg-gray-300"
+                    ? "bg-secondary/30 dark:bg-[var(--tertiary)]/30 hover:bg-secondary/40 dark:hover:bg-[var(--tertiary)]/40"
+                    : "bg-gray-200 dark:bg-[var(--surface)] hover:bg-gray-300 dark:hover:bg-[var(--border-muted)]"
                 }`}
               >
                 <PlusIcon 
@@ -410,15 +410,15 @@ const BookingCalculator = () => {
 
         {serviceData.selected && (
           <div className="pt-1 px-3 font-work-sans">
-            <p className="text-xs text-gray-600 leading-relaxed text-center md:text-left md:w-full font-work-sans italic">
+            <p className="text-xs text-gray-600 dark:text-[var(--muted-foreground)] leading-relaxed text-center md:text-left md:w-full font-work-sans italic">
               {serviceDetails[service]}
             </p>
           </div>
         )}
 
         {isExpanded && (
-          <div className="mt-2 p-3 bg-gray-50 ">
-            <p className="text-xs text-gray-600 italic ">
+          <div className="mt-2 p-3 bg-gray-50 dark:bg-[var(--surface-alt)]">
+            <p className="text-xs text-gray-600 dark:text-[var(--muted-foreground)] italic ">
               {serviceDetails[service]}
             </p>
           </div>
@@ -453,10 +453,9 @@ const BookingCalculator = () => {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 backdrop-blur-md bg-gradient-to-br from-black/20 via-black/10 to-black/5 z-50"
+          className="fixed inset-0 backdrop-blur-md bg-gradient-to-br from-white/30 via-white/20 to-white/10 dark:from-black/60 dark:via-black/50 dark:to-black/40 z-50"
           onClick={toggleCalculator}
           style={{
-            background: "rgba(255, 255, 255, 0.3)",
             backdropFilter: "blur(4px) saturate(100%)",
             WebkitBackdropFilter: "blur(4px) saturate(100%)",
           }}
@@ -465,28 +464,28 @@ const BookingCalculator = () => {
 
       {/* Sliding Calculator */}
       <div
-        className={`fixed right-0 bottom-0 w-full md:w-[30rem] bg-white  transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed right-0 bottom-0 w-full md:w-[30rem] bg-white dark:bg-[var(--card-surface)] transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen
-            ? "translate-x-0 shadow-[0_-14px_50px_rgba(0,0,0,0.6)]"
+            ? "translate-x-0 shadow-[0_-14px_50px_rgba(0,0,0,0.6)] dark:shadow-[0_-14px_50px_rgba(0,0,0,0.9)]"
             : "translate-x-full"
         }`}
         style={{ height: "100vh" }}
       >
         <div className="h-full flex flex-col z-[1001]">
           {/* Header */}
-          <div className="sticky top-0 z-10 bg-white px-4 md:px-6 py-4 flex-shrink-0">
+          <div className="sticky top-0 z-10 bg-white dark:bg-[var(--card-surface)] px-4 md:px-6 py-4 flex-shrink-0 border-b border-gray-200 dark:border-[var(--border-muted)]">
             <div className="flex items-center justify-between">
               <div className="flex-1 pr-4">
-                <h2 className="text-lg md:text-4xl font-semibold text-gray-800">
+                <h2 className="text-lg md:text-4xl font-semibold text-gray-800 dark:text-[var(--foreground)]">
                   Book Your Cleaning Service
                 </h2>
-                <p className="text-gray-600 mt-2 md:mt-0 text-sm md:text-lg">
+                <p className="text-gray-600 dark:text-[var(--muted-foreground)] mt-2 md:mt-0 text-sm md:text-lg">
                   Why waste your valuable time on cleaning
                 </p>
               </div>
               <button
                 onClick={toggleCalculator}
-                className="text-gray-400 cursor-pointer hover:text-gray-600 flex-shrink-0"
+                className="text-gray-400 dark:text-[var(--muted-foreground)] cursor-pointer hover:text-gray-600 dark:hover:text-[var(--foreground)] flex-shrink-0"
               >
                 <CloseIcon className="w-6 h-6" />
               </button>
@@ -503,7 +502,7 @@ const BookingCalculator = () => {
                   placeholder="Name*"
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
-                  className="w-full px-4 py-3 border-b border-[#757575] placeholder:text-[#757575] outline-none text-base md:text-sm text-gray-800 bg-white"
+                  className="w-full px-4 py-3 border-b border-[#757575] dark:border-[var(--border-muted)] placeholder:text-[#757575] dark:placeholder:text-[var(--muted-foreground)] outline-none text-base md:text-sm text-gray-800 dark:text-[var(--foreground)] bg-white dark:bg-[var(--card-surface)]"
                   inputMode="text"
                   autoComplete="name"
                 />
@@ -518,11 +517,11 @@ const BookingCalculator = () => {
                     handleInputChange("whatsapp", e.target.value)
                   }
                   // maxLength="10"
-                  className="w-full px-4 py-3 pr-12 border-b border-[#757575] placeholder:text-[#757575] outline-none text-base md:text-sm text-gray-800 bg-white"
+                  className="w-full px-4 py-3 pr-12 border-b border-[#757575] dark:border-[var(--border-muted)] placeholder:text-[#757575] dark:placeholder:text-[var(--muted-foreground)] outline-none text-base md:text-sm text-gray-800 dark:text-[var(--foreground)] bg-white dark:bg-[var(--card-surface)]"
                 />
                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                   <svg
-                    className="w-5 h-5 text-green-500"
+                    className="w-5 h-5 text-green-500 dark:text-[var(--tertiary)]"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -537,7 +536,7 @@ const BookingCalculator = () => {
                   placeholder="Email*"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  className="w-full px-4 py-3 border-b border-[#757575] placeholder:text-[#757575] outline-none text-base md:text-sm text-gray-800 bg-white"
+                  className="w-full px-4 py-3 border-b border-[#757575] dark:border-[var(--border-muted)] placeholder:text-[#757575] dark:placeholder:text-[var(--muted-foreground)] outline-none text-base md:text-sm text-gray-800 dark:text-[var(--foreground)] bg-white dark:bg-[var(--card-surface)]"
                   required
                 />
               </div>
@@ -546,7 +545,7 @@ const BookingCalculator = () => {
                 <select
                   value={formData.state}
                   onChange={(e) => handleInputChange("state", e.target.value)}
-                  className="w-full px-4 py-3 pr-10 border-b border-[#757575] text-gray-800 outline-none appearance-none bg-white text-base md:text-sm"
+                  className="w-full px-4 py-3 pr-10 border-b border-[#757575] dark:border-[var(--border-muted)] text-gray-800 dark:text-[var(--foreground)] outline-none appearance-none bg-white dark:bg-[var(--card-surface)] text-base md:text-sm"
                 >
                   <option value="">Select State</option>
                   {/* <option value="maharashtra">Maharashtra</option>
@@ -565,7 +564,7 @@ const BookingCalculator = () => {
                   placeholder="Enter City"
                   value={formData.city}
                   onChange={(e) => handleInputChange("city", e.target.value)}
-                  className="w-full px-4 py-3 border-b border-[#757575] placeholder:text-[#757575] outline-none text-base md:text-sm text-gray-800 bg-white"
+                  className="w-full px-4 py-3 border-b border-[#757575] dark:border-[var(--border-muted)] placeholder:text-[#757575] dark:placeholder:text-[var(--muted-foreground)] outline-none text-base md:text-sm text-gray-800 dark:text-[var(--foreground)] bg-white dark:bg-[var(--card-surface)]"
                 />
               </div>
 
@@ -575,7 +574,7 @@ const BookingCalculator = () => {
                   placeholder="Pick a date"
                   value={formData.date}
                   onChange={(e) => handleInputChange("date", e.target.value)}
-                  className="w-full px-4 py-3 pr-12 border-b border-[#757575] placeholder:text-[#757575] outline-none text-base md:text-sm text-gray-800 bg-white [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-3"
+                  className="w-full px-4 py-3 pr-12 border-b border-[#757575] dark:border-[var(--border-muted)] placeholder:text-[#757575] dark:placeholder:text-[var(--muted-foreground)] outline-none text-base md:text-sm text-gray-800 dark:text-[var(--foreground)] bg-white dark:bg-[var(--card-surface)] [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-3"
                 />
                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
                   <CalenderIcon />
@@ -585,7 +584,7 @@ const BookingCalculator = () => {
 
             {/* Services Selection */}
             <div className="mb-5">
-              <h3 className="text-sm text-[#757575] mb-3">
+              <h3 className="text-sm text-[#757575] dark:text-[var(--muted-foreground)] mb-3">
                 Select Below Service*
               </h3>
 
@@ -605,7 +604,7 @@ const BookingCalculator = () => {
                   handleInputChange("otherService", e.target.value)
                 }
                 rows={1}
-                className="w-full px-4 py-3 border-b border-[#757575] placeholder:text-[#757575] outline-none resize-none text-base md:text-sm text-gray-800 bg-white"
+                className="w-full px-4 py-3 border-b border-[#757575] dark:border-[var(--border-muted)] placeholder:text-[#757575] dark:placeholder:text-[var(--muted-foreground)] outline-none resize-none text-base md:text-sm text-gray-800 dark:text-[var(--foreground)] bg-white dark:bg-[var(--card-surface)]"
               />
             </div>
 
@@ -614,8 +613,8 @@ const BookingCalculator = () => {
               <div
                 className={`mb-4 p-3 rounded-lg border ${
                   submitMessage.type === "success"
-                    ? "bg-green-50 border-green-200"
-                    : "bg-red-50 border-red-200"
+                    ? "bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800/50"
+                    : "bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800/50"
                 }`}
               >
                 <div className="flex items-center">
@@ -627,8 +626,8 @@ const BookingCalculator = () => {
                   <span
                     className={`text-sm font-medium ${
                       submitMessage.type === "success"
-                        ? "text-green-700"
-                        : "text-red-700"
+                        ? "text-green-700 dark:text-green-300"
+                        : "text-red-700 dark:text-red-300"
                     }`}
                   >
                     {submitMessage.text}
@@ -639,10 +638,10 @@ const BookingCalculator = () => {
 
             {/* Service Warning (only shown when user tries to submit without services) */}
             {showServiceWarning && (
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+              <div className="mb-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 rounded-lg">
                 <div className="flex items-center">
                   <WarningIcon className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="text-sm text-red-700 font-medium">
+                  <span className="text-sm text-red-700 dark:text-red-300 font-medium">
                     Please select at least one service to get your quote.
                   </span>
                 </div>
@@ -652,15 +651,15 @@ const BookingCalculator = () => {
           </div>
 
           {/* Sticky Bottom Button */}
-          <div className="flex-shrink-0 bg-white px-4 md:px-6 py-4 border-t border-gray-200">
+          <div className="flex-shrink-0 bg-white dark:bg-[var(--card-surface)] px-4 md:px-6 py-4 border-t border-gray-200 dark:border-[var(--border-muted)]">
             <button
               onClick={handleSubmitQuote}
               disabled={isLoading}
-              className="w-full bg-primary text-white font-medium py-4 px-6 rounded-full transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-primary dark:bg-[var(--accent-strong)] text-white dark:text-[var(--background)] font-medium py-4 px-6 rounded-full transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <>
-                  <LoadingSpinnerIcon className="-ml-1 mr-3 h-5 w-5 text-white" />
+                  <LoadingSpinnerIcon className="-ml-1 mr-3 h-5 w-5 text-white dark:text-[var(--background)]" />
                   <span>Submitting...</span>
                 </>
               ) : (
