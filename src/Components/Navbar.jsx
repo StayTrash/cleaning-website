@@ -65,7 +65,7 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav ref={navbarRef} className="fixed top-0 left-0 right-0 z-50 w-full">
+    <nav ref={navbarRef} className="fixed top-0 left-0 right-0 z-51 w-full">
       <div className="max-w-[1074px] mx-auto pt-[2.3rem] px-4">
         <div className="bg-[var(--nav-surface)] border border-[var(--nav-border)] rounded-full px-7 py-1.5 flex items-center justify-between transition-colors duration-300">
           {/* Logo Section */}
@@ -135,7 +135,7 @@ const Navbar = () => {
               {isServicesDropdownOpen && (
                 <div className="">
                   <div className="h-2"></div>
-                  <div className="absolute top-full left-0 z-50 w-80 bg-[var(--nav-surface)] border border-[var(--nav-border)] rounded-2xl shadow-lg py-4 px-2 z-50 animate-in slide-in-from-top-2 duration-200">
+                  <div className="absolute top-full left-0 z-51 w-80 bg-[var(--nav-surface)] border border-[var(--nav-border)] rounded-2xl shadow-lg py-4 px-2 z-51 animate-in slide-in-from-top-2 duration-200">
                     <div
                       onClick={handleServiceClick}
                       className="flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer hover:bg-[var(--nav-surface-hover)] transition-all duration-200 group"
