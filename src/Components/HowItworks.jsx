@@ -116,7 +116,7 @@ const HowItWorksSection = () => {
                       </span>
                     </div>
 
-                    <span className="z-50 text-3xl z-50 lg:text-5xl xl:text-6xl text-[#FAFFFA] leading-[1.1] tracking-[-0.02em] font-semibold font-serif">
+                    <span className="z-50 text-3xl lg:text-5xl xl:text-6xl text-[#FAFFFA] dark:text-[var(--foreground)] leading-[1.1] tracking-[-0.02em] font-semibold font-serif">
                       {/* Behind Every Shine, There's a System */}Precision
                       cleaning, Powered By Process
                     </span>
@@ -178,9 +178,9 @@ const HowItWorksSection = () => {
                         <div className="absolute 2xl:bottom-0 md:bottom-0 bottom-11 2xl:right-16 md:right-7 right-4 z-50 group">
                           <div className="relative inline-block">
                             <InfoIcon />
-                            <div className="invisible opacity-0 group-hover:visible  group-hover:opacity-100 transition-opacity duration-200 absolute top-11 left-1/2 transform -translate-x-1/2 w-64 md:w-80 bg-white text-primary shadow-xl text-xs p-4 rounded-lg shadow-xl border border-gray-200 z-50 whitespace-pre-line leading-relaxed text-left">
+                            <div className="invisible opacity-0 group-hover:visible  group-hover:opacity-100 transition-opacity duration-200 absolute top-11 left-1/2 transform -translate-x-1/2 w-64 md:w-80 bg-white dark:bg-[var(--card-surface)] text-primary dark:text-[var(--foreground)] shadow-xl text-xs p-4 rounded-lg border border-gray-200 dark:border-[var(--border-muted)] z-50 whitespace-pre-line leading-relaxed text-left">
                               {step.note}
-                              <span className="absolute bottom-full left-1/2  transform -translate-x-1/2 w-3 h-3 bg-white rotate-45 border-r border-b border-gray-200"></span>
+                              <span className="absolute bottom-full left-1/2  transform -translate-x-1/2 w-3 h-3 bg-white dark:bg-[var(--card-surface)] rotate-45 border-r border-b border-gray-200 dark:border-[var(--border-muted)]"></span>
                             </div>
                           </div>
                         </div>

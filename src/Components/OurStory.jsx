@@ -5,10 +5,10 @@ import SlideUp from "@/Components/animations/SlideUp";
 
 const OurStory = () => {
   return (
-    <section className=" relative  bg-[#FAFFFA] my-14 md:py-10">
+    <section className=" relative  bg-[#FAFFFA] dark:bg-[var(--surface)] my-14 md:py-10">
       {/* Green background with cut on bottom left */}
       <div
-        className="absolute inset-0 top-[38%] bg-tertiary md:mx-1
+        className="absolute inset-0 top-[38%] bg-tertiary dark:bg-[var(--surface-alt)] md:mx-1
              [--cut-size:30px] 
              md:[--cut-size:99px]"
         style={{
@@ -26,12 +26,12 @@ const OurStory = () => {
                   <div className="p-2">
                     <HelloIcon />
                   </div>
-                  <div className="text-[#00603A] font-semibold font-serif text-lg">
+                  <div className="text-[#00603A] dark:text-[var(--accent-strong)] font-semibold font-serif text-lg">
                     Our Story
                   </div>
                 </div>
               </div>
-              <h2 className="md:hidden block text-3xl lg:text-5xl font-semibold font-serif text-[#1a1a1a] leading-tight">
+              <h2 className="md:hidden block text-3xl lg:text-5xl font-semibold font-serif text-[#1a1a1a] dark:text-[var(--foreground)] leading-tight">
                 {/* Born from the Mess.
                 <br />
                 Built on Trust. */}
@@ -67,11 +67,11 @@ const OurStory = () => {
                   <div className="p-2">
                     <HelloIcon />
                   </div>
-                  <div className="text-[#00603A] font-semibold font-serif text-lg">
+                  <div className="text-[#00603A] dark:text-[var(--accent-strong)] font-semibold font-serif text-lg">
                     Our Story
                   </div>
                 </div>
-                <h2 className="hidden md:!block text-3xl lg:text-5xl font-semibold font-serif text-[#1a1a1a] leading-tight">
+                <h2 className="hidden md:!block text-3xl lg:text-5xl font-semibold font-serif text-[#1a1a1a] dark:text-[var(--foreground)] leading-tight">
                   {/* Born from the Mess.
                   <br />
                   Built on Trust. */}
@@ -82,7 +82,7 @@ const OurStory = () => {
               {/* Main Heading */}
 
               <div className="w-full flex justify-end space-y-6">
-                <p className="md:w-[80%] text-primary md:text-base text-sm leading-[2]  pb-8 md:pb-0 text-left md:text-left">
+                <p className="md:w-[80%] text-primary dark:text-[var(--muted-foreground)] md:text-base text-sm leading-[2]  pb-8 md:pb-0 text-left md:text-left">
                   I founded TrueClean after a frustrating experience with
                   "premium" cleaning that was neither safe nor healthy.
                   TrueClean ensures every service uses non-toxic, eco-friendly
