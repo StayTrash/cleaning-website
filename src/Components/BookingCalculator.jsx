@@ -464,7 +464,7 @@ const BookingCalculator = () => {
 
       {/* Sliding Calculator */}
       <div
-        className={`fixed right-0 bottom-0 w-full md:w-[30rem] bg-white dark:bg-[var(--card-surface)] transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed right-0 bottom-0 w-full md:w-[30rem] bg-white dark:bg-[var(--card-surface)] transform transition-transform duration-300 ease-in-out z-51 ${
           isOpen
             ? "translate-x-0 shadow-[0_-14px_50px_rgba(0,0,0,0.6)] dark:shadow-[0_-14px_50px_rgba(0,0,0,0.9)]"
             : "translate-x-full"
